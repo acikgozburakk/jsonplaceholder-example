@@ -6,7 +6,7 @@
       </router-link>
 
       <router-link to="/" tag="a" class="link">
-        ANASAYFA
+        HOME
       </router-link>
 
       
