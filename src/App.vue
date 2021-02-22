@@ -1,30 +1,51 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <Nav />
+    <div class="container pages">
+      <router-view />
+    </div>
   </div>
-  <router-view/>
 </template>
+<script>
+import Nav from "./components/Shared/Nav";
+export default {
+  components: {
+    Nav,
+  },
+};
+</script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
 }
 
-#nav {
-  padding: 30px;
+html,
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fafafa;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+li {
+  list-style: none;
+}
+
+/* @main */
+#app {
+  min-height: 100vh;
+  background: #fafafa;
+}
+.container {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
